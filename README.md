@@ -43,7 +43,7 @@ https://www.electronjs.org/docs
 - Electron 镜像源
 - 打包
 - 安装Electron，tips:安装32位的Electron，这样后续打出的包，可以运行在32位，64位系统中运行。
-
+- 全局安装   cnpm install -g electron  tips:需要以管理员的身份运行
 
 
 

@@ -2,9 +2,10 @@
   "name": "electron",
   "version": "1.0.0",
   "description": "Electron = Chromium + Node.js +Native API\r 不用考虑兼容性，允许使用web 技术来开发桌面应用",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
