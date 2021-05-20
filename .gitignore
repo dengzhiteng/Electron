@@ -1,0 +1,23 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+tests/
+tests/**/coverage/
+html/
+*.zip
+
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+/src/api/common.js
+/src/views/basic/orgAndEmployee/organization/~old
+/src/views/other/test.vue
