@@ -1,56 +1,22 @@
-# Electron 
-Electron = Chromium + Node.js +Native API
-不用考虑兼容性，允许使用web 技术来开发桌面应用
+# my-project
 
-Electron 成品：
-VSCode 
-Atom
-slack
-wordpress
+> An electron-vue project
 
-menu
-右击
-Remote
-shell
-嵌入网页和打开子窗口
-父子通信
-window.opener.postMessage('---')
+#### Build Setup
 
-https://www.bilibili.com/video/BV177411s7Lt?p=17
-https://www.electronjs.org/docs
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:9080
+npm run dev
+
+# build electron application for production
+npm run build
 
 
+```
 
-### 为什么要开发桌面端
-- 更编辑的入口
-- 离线可用
-- 调用系统能力
-- 安全需求
+---
 
-### 用于开发桌面应用的技术
-- Native
-- QT
-- Flutter
-- NW.js
-- Electron
-- PWA
-- Carlo
-- WPF
-- CEF
-
-
-### Electron 
-- Electron 镜像源
-- 打包
-- 安装Electron，tips:安装32位的Electron，这样后续打出的包，可以运行在32位，64位系统中运行。
-- 全局安装   cnpm install -g electron  tips:需要以管理员的身份运行
-
-
-
-
-
-
-
-
-
-
+This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue)@[8d4ed60](https://github.com/SimulatedGREG/electron-vue/tree/8d4ed607d65300381a8f47d97923eb07832b1a9a) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
