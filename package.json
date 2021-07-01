@@ -1,8 +1,15 @@
 {
   "name": "Electron",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
+  "description": "learn Electron",
   "repository": "https://github.com.cnpmjs.org/dengzhiteng/Electron.git",
   "author": "dengzhiteng <dengzhiteng@jwx.com.cn>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^13.1.4"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
 }
