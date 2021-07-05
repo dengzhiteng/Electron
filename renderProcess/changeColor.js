@@ -1,12 +1,8 @@
-var {ipcRenderer} = require('electron');
+const {ipcRenderer} = require("electron");
+const selectColor = localStorage.getItem("selectColor");
+document.querySelector(".result-text").style.color = selectColor;
 
-var num = document.querySelector('.result-text');
-
-//监听主进程发送过来的消息，改变数字的颜色
-ipcRenderer.on('doChangeCol', (e, msg) => {
-    num.style.color = msg
-});
-
-ipcRenderer.on('finishLoad', (e, msg) => {
-    // alert(msg)
+ipcRenderer.on("doChangeCol", (e, msg) => {
+  document.querySelector(".result-text").style.color = msg;
+  localStorage.setItem("selectColor", msg);
 });

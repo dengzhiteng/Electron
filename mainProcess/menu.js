@@ -3,41 +3,17 @@ const path = require("path");
 
 let template = [
   {
-    label: "格式",
-    submenu: [
-      {
-        label: "字体减小",
-        accelerator: "F9",
-        click: function () {
-          console.log("numsub");
-        },
-      },
-      {
-        label: "字体增大",
-        accelerator: "F10",
-        click: function () {
-          console.log("numadd");
-        },
-      },
-      {
-        label: "颜色",
-        accelerator: "CmdOrCtrl+Shift+C",
-        click: function () {
-          console.log("color");
-        },
-      },
-      {
-        label: "默认字体",
-      },
-    ],
-  },
-  {
-    label: "帮助",
+    label: "计算器",
     submenu: [
       {
         label: "关于",
         click: function () {
-          createWindow();
+          const options = {
+            width: 300,
+            height: 400,
+            url: path.join(__dirname, "../views/about.html"),
+          };
+          createWindow(options);
         },
       },
       {
@@ -65,26 +41,58 @@ let template = [
         accelerator: "Esc",
         role: "minimize",
         click: function () {
-          console.log("Esc");
           // 用于判断平台
-          console.log(process.platform);
+          // console.log(process.platform);
         },
       },
     ],
   },
+  {
+    label: "格式",
+    submenu: [
+      {
+        label: "字体减小",
+        accelerator: "F9",
+        click: function () {
+          console.log("numsub");
+        },
+      },
+      {
+        label: "字体增大",
+        accelerator: "F10",
+        click: function () {
+          console.log("numadd");
+        },
+      },
+      {
+        label: "颜色",
+        accelerator: "CmdOrCtrl+Shift+C",
+        click: function () {
+          const options = {
+            width: 300,
+            height: 100,
+            url: path.join(__dirname, "../views/color.html"),
+          };
+          createWindow(options);
+        },
+      },
+      {
+        label: "默认字体",
+      },
+    ],
+  },
 ];
-
-function createWindow() {
+function createWindow(options) {
   const win = new BrowserWindow({
-    width: 300,
-    height: 400,
-    title: "前端-计算器",
+    width: options.width,
+    height: options.height,
+    title: options.title,
     backgroundColor: "#f1f1f1",
   });
-  // 加载页面
-  win.loadFile(path.join(__dirname, "../views/about.html"));
+  win.loadURL(options.url);
   win.show();
   win.setMenu(null);
+  win.webContents.openDevTools();
 }
 
 const menu = Menu.buildFromTemplate(template);
