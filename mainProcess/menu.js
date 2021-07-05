@@ -54,14 +54,14 @@ let template = [
         label: "字体减小",
         accelerator: "F9",
         click: function () {
-          console.log("numsub");
+            e.sender.send("doChangeFondSize", "reduce");
         },
       },
       {
         label: "字体增大",
         accelerator: "F10",
-        click: function () {
-          console.log("numadd");
+        click: function (e) {
+             e.sender.send("doChangeFondSize", "add");
         },
       },
       {

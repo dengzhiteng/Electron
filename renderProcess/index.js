@@ -6,3 +6,7 @@ ipcRenderer.on("doChangeCol", (e, msg) => {
   document.querySelector(".result-text").style.color = msg;
   localStorage.setItem("selectColor", msg);
 });
+
+ipcRenderer.on("doChangeFondSize", (e, msg) => {
+  console.log(msg);
+});
