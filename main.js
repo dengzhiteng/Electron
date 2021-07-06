@@ -9,6 +9,7 @@ function createWindow() {
     height: 600,
     title: "前端-计算器",
     backgroundColor: "#f1f1f1",
+    icon: "assets/images/icon.ico",
   });
 
   // 设置menu

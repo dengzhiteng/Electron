@@ -91,6 +91,7 @@ function createWindow(options) {
     height: options.height,
     title: options.title,
     backgroundColor: "#f1f1f1",
+    icon: "assets/images/icon.ico",
   });
   win.loadURL(options.url);
   win.show();
