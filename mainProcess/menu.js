@@ -95,7 +95,7 @@ function createWindow(options) {
   win.loadURL(options.url);
   win.show();
   win.setMenu(null);
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 }
 
 const menu = Menu.buildFromTemplate(template);
