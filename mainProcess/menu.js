@@ -53,15 +53,15 @@ let template = [
       {
         label: "字体减小",
         accelerator: "F9",
-        click: function () {
-            e.sender.send("doChangeFondSize", "reduce");
+        click: function (item, win) {
+          win.webContents.send("doChangeFondSize", "reduce");
         },
       },
       {
         label: "字体增大",
         accelerator: "F10",
-        click: function (e) {
-             e.sender.send("doChangeFondSize", "add");
+        click: function (item, win) {
+          win.webContents.send("doChangeFondSize", "add");
         },
       },
       {
@@ -78,6 +78,9 @@ let template = [
       },
       {
         label: "默认字体",
+        click: function (item, win) {
+          win.webContents.send("doChangeFondSize", "reset");
+        },
       },
     ],
   },
