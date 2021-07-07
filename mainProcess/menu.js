@@ -18,7 +18,6 @@ let template = [
       },
       {
         label: "退出",
-        // role: "quit",
         accelerator: "Alt+F4",
         click: function (item, win, events) {
           dialog
@@ -30,7 +29,6 @@ let template = [
             .then((res) => {
               const {response} = res;
               if (response == 0) {
-                // app.quit();
                 win.destroy();
               }
             });
@@ -40,10 +38,6 @@ let template = [
         label: "最小化",
         accelerator: "Esc",
         role: "minimize",
-        click: function () {
-          // 用于判断平台
-          // console.log(process.platform);
-        },
       },
     ],
   },
@@ -96,7 +90,6 @@ function createWindow(options) {
   win.loadURL(options.url);
   win.show();
   win.setMenu(null);
-  // win.webContents.openDevTools();
 }
 
 const menu = Menu.buildFromTemplate(template);
