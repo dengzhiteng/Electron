@@ -7,10 +7,12 @@
   "author": "dengzhiteng <dengzhiteng@jwx.com.cn>",
   "license": "MIT",
   "dependencies": {
-    "electron": "^4.0.0",
+    "electron": "3.0.7",
+    "electron-packager": "^15.2.0",
     "mathjs": "^9.4.3"
   },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "packagewin": "electron-packager . webTool --platform=win32 --out=./dist --arch=x64 --app-version=1.0.1 --icon=./assets/images/icon.ico --overwrite"
   }
 }
